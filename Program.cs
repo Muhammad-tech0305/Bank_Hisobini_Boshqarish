@@ -9,12 +9,13 @@ while (true)
 {
     Console.WriteLine();
     Console.WriteLine(" \t <<< BankApp >>> ");
-    Console.WriteLine("1. Hisob yaratish" + "\n2. Hisob raqamlarimni ko'rish" + "\n3. Pul o'tkazish" + "\n4. Hisob balansini ko'rish" + "\n5. Depozit qo'yish" + "\n6. Chiqish");
+    Console.WriteLine("1. Hisob yaratish" + "\n2. Hisob raqamlarimni ko'rish" + "\n3. Pul o'tkazish" + "\n4. Hisob balansini ko'rish" + "\n5. Depozit qo'yish" + "\n6. Hisobni yopish" + "\n7. Chiqish");
     Console.Write("Bo'limni tanlang: ");
 
     try
     {
         int choice = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine();
         switch (choice)
         {
             case 1:
@@ -121,6 +122,27 @@ while (true)
                 break;
 
             case 6:
+                Console.Write("Hisob raqamingizni kiriting: ");
+                string accountNumber4 = Console.ReadLine();
+                BankAccount account4 = null;
+                foreach (BankAccount acc in customer.Accounts)
+                {
+                    if (acc.AccountNumber == accountNumber4)
+                    {
+                        account4 = acc;
+                        break;
+                    }
+                }
+                if (account4 == null)
+                {
+                    Console.WriteLine("Bunday hisob mavjud emas!");
+                    break;
+                }
+                Bank.DeleteAccount(customer, account4);
+                Console.WriteLine("Hisob yopildi!");
+                break;
+
+            case 7:
                 Environment.Exit(0);
                 break;
             default:
