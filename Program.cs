@@ -75,6 +75,7 @@ while (true)
                 Bank.Transaction(fromAccount, toAccount, amount);
                 Console.WriteLine("Pul o'tkazildi!");
                 break;
+
             case 4:
                 Console.Write("Hisob raqamingizni kiriting: ");
                 string accountNumber2 = Console.ReadLine();
@@ -94,6 +95,7 @@ while (true)
                 }
                 Console.WriteLine("Hisob balansi: " + account2.GetBalance());
                 break;
+
             case 5:
                 Console.Write("Hisob raqamingizni kiriting: ");
                 string accountNumber3 = Console.ReadLine();
@@ -116,6 +118,7 @@ while (true)
                 account3.Deposit(amount2);
                 Console.WriteLine("Depozit qo'yildi!");
                 break;
+                
             case 6:
                 Environment.Exit(0);
                 break;
