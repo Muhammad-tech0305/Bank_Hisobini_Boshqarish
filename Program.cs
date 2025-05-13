@@ -34,7 +34,7 @@ while (true)
                 }
                 foreach (BankAccount acc in customer.Accounts)
                 {
-                    Console.WriteLine($"'{acc.AccountNumber}', balansi: acc.GetBalance()");
+                    Console.WriteLine($"'{acc.AccountNumber}', balansi: {acc.GetBalance()}");
                 }
                 break;
 
@@ -133,6 +133,6 @@ while (true)
     {
         Console.WriteLine("Noto'g'ri ma'lumot kiritildi.");
     }
-    
+
     Console.WriteLine();   
 }
