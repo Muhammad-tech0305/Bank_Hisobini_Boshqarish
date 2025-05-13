@@ -7,6 +7,7 @@ Customer customer = new Customer(name);
 
 while (true)
 {
+    Console.WriteLine();
     Console.WriteLine(" \t <<< BankApp >>> ");
     Console.WriteLine("1. Hisob yaratish" + "\n2. Hisob raqamlarimni ko'rish" + "\n3. Pul o'tkazish" + "\n4. Hisob balansini ko'rish" + "\n5. Depozit qo'yish" + "\n6. Chiqish");
     Console.Write("Bo'limni tanlang: ");
@@ -118,7 +119,7 @@ while (true)
                 account3.Deposit(amount2);
                 Console.WriteLine("Depozit qo'yildi!");
                 break;
-                
+
             case 6:
                 Environment.Exit(0);
                 break;
@@ -127,8 +128,11 @@ while (true)
                 break;  
         } 
     }
+
     catch (Exception)
     {
         Console.WriteLine("Noto'g'ri ma'lumot kiritildi.");
-    }   
+    }
+    
+    Console.WriteLine();   
 }
