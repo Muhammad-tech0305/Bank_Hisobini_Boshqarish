@@ -11,5 +11,3 @@
 
 4. Hisob raqamni yopish va dasturdan chiqish:
    ![Hisob raqamni yopish dasturdas=n chiqish](https://github.com/user-attachments/assets/c167d29f-1f07-4f24-9627-69f2311aa916)
-
-'''OOP Advanced bo'limi uchun'''
